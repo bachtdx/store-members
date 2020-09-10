@@ -5,20 +5,37 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version: 2.7.1
 
-* System dependencies
+* Rails version: 6.0.3
 
-* Configuration
+Startup project:
 
-* Database creation
+* Install gem: bundle install
 
-* Database initialization
+* Database initialization: rake db:create
 
-* How to run the test suite
+* Seed an admin: rake db:seed
 
-* Services (job queues, cache servers, search engines, etc.)
+* Run: rails s -p 3000
 
-* Deployment instructions
+* API:
+      + Method: POST, Link: localhost:3000/signup, Params: (name:bach
+                                                           email:bach@gmail.com
+                                                           password:123456
+                                                           password_confirmation:123456)
+      + Method: POST, Link: localhost:3000/auth/login, Params: (email:bach@gmail.com
+                                                                password:123456)  
+      + Method: POST, Link: localhost:3000/auth/login-admin Params: (email:admin@admin.com
+                                                                     password:admin@123)
+      + Method: Get, Link: localhost:3000/list-users?page=1 (Authorization: Get the token from api login-admin)
+      + Method: Put, Link: localhost:3000/edit-user 
+        (Authorization: Get the token from api login-admin) (id:1
+                                                             name:abc
+                                                             email:abc@gmail.com)
+      + Method: Delete, Link: localhost:3000/delete-user
+        (Authorization: Get the token from api login-admin) (id:1)   
+      + Method: Get, Link: localhost:3000/search-user
+        (Authorization: Get the token from api login-admin) (key:c)                                                                             
 
 * ...
