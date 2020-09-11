@@ -37,5 +37,5 @@ Startup project:
         (Authorization: Get the token from api login-admin) (id:1)   
       + Method: Get, Link: localhost:3000/search-user
         (Authorization: Get the token from api login-admin) (key:c)                                                                             
-
+* Run test: bundle exec rspec
 * ...

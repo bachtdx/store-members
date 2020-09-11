@@ -17,7 +17,7 @@ RSpec.describe AuthorizeApiRequestAdmin do
     context 'when valid request' do
       it 'returns admin object' do
         result = request_obj.call
-        expect(result)
+        expect(result[:administrator])
       end
     end
 
